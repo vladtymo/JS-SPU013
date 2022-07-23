@@ -7,11 +7,11 @@ console.error("Some error!");
 let variable;           // undefined
 variable = null;        // null
 
-variable = 10;          // number
+variable = 10;          // number: 10, 55.2, 100000, -1, NaN (not a number), Infinity+, Infinity-
 variable = 5.7;         // number
 
-variable = "hello";     // string
-variable = true;        // boolean
+variable = "hello";     // string: "hello", 'ABC', '$'
+variable = true;        // boolean: true, false
 variable = [1, 2, 3];   // object
 
 //console.log("Variable = " + variable + ", Type: " + typeof(variable));
@@ -52,9 +52,9 @@ console.log("Answer: " + (isContinue ? "Yes" : "No"));
 
 // -=-=-=-=-=-=-=-=- base statements -=-=-=-=-=-=-=-=-
 // if (condition) {
-   
+
 // } else {
-    
+
 // }
 
 // switch (key) {
@@ -66,7 +66,7 @@ console.log("Answer: " + (isContinue ? "Yes" : "No"));
 // }
 
 // while (condition) {
-    
+
 // }
 // do {
 
@@ -75,3 +75,19 @@ console.log("Answer: " + (isContinue ? "Yes" : "No"));
 // for (let i = 0; i < array.length; i++) {
 //     const element = array[i];
 // }
+
+// -=-=-=-=-=-=-=-=- functions -=-=-=-=-=-=-=-=-
+
+// function declaration
+function showMessage(text) {
+    alert("Your message: " + text + "!");
+}
+
+showMessage("hello functions");
+
+// function expression
+//const mult = function(a, b) { return a + b; };
+// arrow funciton 
+const mult = (a, b) => a + b;
+
+console.log("Function result: " + mult(10, 3));
